@@ -41,13 +41,13 @@ const Navbar = () => {
 
                     <div className="md:flex hidden text-gray-700'">
                         <ul className="flex items-center md:text-xl text-lg">
-                            <Link className="md:mx-2 mx-1" to='/account'>
+                            <Link className="md:mx-3 mx-1" to='/account'>
                                 <BiUserCircle />
                             </Link>
-                            <Link className="md:mx-2 mx-1" to='/'>
+                            <Link className="md:mx-3 mx-1" to='/'>
                                 <BiSearch />
                             </Link>
-                            <Link className="md:mx-2 mx-1" to='/cart'>
+                            <Link className="md:mx-3 mx-1" to='/cart'>
                                 <BsCart2 />
                             </Link>
                         </ul>
