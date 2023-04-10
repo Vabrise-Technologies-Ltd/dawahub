@@ -4,6 +4,7 @@ import './App.css'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import About from './pages/About'
+import Account from './pages/Account'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import Contact from './pages/Contact'
@@ -21,6 +22,7 @@ function App() {
           <Route path='/shop' element={ <Shop /> } />
           <Route path='/about' element={ <About /> } />
           <Route path='/cart' element={ <Cart /> } />
+          <Route path='/account' element={ <Account /> } />
           <Route path='/checkout' element={ <Checkout /> } />
           <Route path='/contact' element={ <Contact /> } />
         </Routes>
