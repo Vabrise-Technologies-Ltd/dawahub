@@ -1,7 +1,9 @@
+import ReachOut from "../components/Home/ReachOut";
+
 const Home = () => {
     return ( 
         <>
-            Home here...
+            <ReachOut />
         </>
      );
 }
