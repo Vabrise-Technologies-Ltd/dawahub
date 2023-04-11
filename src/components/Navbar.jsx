@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return ( 
         <>
-            <nav className="bg-[#FBEBB5] md:py-6 py-4 px-4">
+            <nav className="bg-[#FBEBB5] md:py-6 p-4 top-0 left-0 static z-[100] shadow-xl">
                 <div className="md:flex justify-between items-center">
                     <div className="flex justify-between items-center">
                         <Link className="md:text-lg font-semibold uppercase" to='/'>Dawahub</Link>
@@ -40,15 +40,15 @@ const Navbar = () => {
                     </div>
 
                     <div className="md:flex hidden text-gray-700'">
-                        <ul className="flex items-center md:text-xl text-lg">
-                            <Link className="md:mx-3 mx-1" to='/account'>
-                                <BiUserCircle />
-                            </Link>
+                        <ul className="flex items-center md:text-2xl text-lg">
                             <Link className="md:mx-3 mx-1" to='/'>
                                 <BiSearch />
                             </Link>
                             <Link className="md:mx-3 mx-1" to='/cart'>
                                 <BsCart2 />
+                            </Link>
+                            <Link className="md:mx-3 mx-1" to='/account'>
+                                <BiUserCircle />
                             </Link>
                         </ul>
                     </div>
@@ -73,13 +73,6 @@ const Navbar = () => {
                     <ul className="flex flex-col items-center text-2xl font-medium space-y-8">
                         <Link 
                             className="md:mx-2 mx-1" 
-                            to='/account'
-                            onClick={() => setOpen((prev) => !prev)}
-                            >
-                            <BiUserCircle />
-                        </Link>
-                        <Link 
-                            className="md:mx-2 mx-1" 
                             to='/'
                             onClick={() => setOpen((prev) => !prev)}
                             >
@@ -91,6 +84,13 @@ const Navbar = () => {
                             onClick={() => setOpen((prev) => !prev)}
                             >
                             <BsCart2 />
+                        </Link>
+                        <Link 
+                            className="md:mx-2 mx-1" 
+                            to='/account'
+                            onClick={() => setOpen((prev) => !prev)}
+                            >
+                            <BiUserCircle />
                         </Link>
                     </ul>
                 </div>
