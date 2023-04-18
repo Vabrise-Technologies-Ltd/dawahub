@@ -8,3 +8,24 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
+
+
+
+@layer components {
+    .section-title {
+        @apply md:text-3xl text-xl text-center mb-1 font-medium
+    }
+
+    .section-subtitle {
+        @apply md:text-base text-sm text-center mb-4 text-gray-500
+    }
+}
+
+
+
+
+
+
+
+
+

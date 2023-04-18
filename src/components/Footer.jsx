@@ -1,8 +1,11 @@
 const Footer = () => {
+    const date = new Date()
+    const year = date.getFullYear()
+
     return ( 
         <>
-            <div>
-                <footer className="footer md:py-16 py-8 px-4 bg-base-200 text-base-content">
+            <div className="bg-base-200 md:py-16 py-8 px-4">
+                <footer className="footer text-base-content md:py-8 py-4 ">
                     <div>
                         <span className="footer-title">Links</span> 
                         <a className="link link-hover">Branding</a> 
@@ -35,12 +38,18 @@ const Footer = () => {
                         </div>
                         </div>
                     </div>
-                    <hr className=""/>
-                    <div>
 
-                    </div>
+                    
                 </footer>
                 
+                <hr className="border-gray-500 " />
+
+                <div className="mt-3">
+                    <p>
+                        {year} 
+                        <a href="#" className="ml-1 text-cyan-700">Dawahub Africa</a>. All rights reserved
+                    </p>
+                </div>
             </div>
         </>
     );
