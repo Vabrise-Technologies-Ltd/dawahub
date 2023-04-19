@@ -4,7 +4,7 @@ const Footer = () => {
 
     return ( 
         <>
-            <div className="bg-base-200 md:py-16 py-8 px-4">
+            <div className="bg-white md:py-16 py-8 px-4">
                 <footer className="footer text-base-content md:py-8 py-4 ">
                     <div>
                         <span className="footer-title">Links</span> 
@@ -34,7 +34,7 @@ const Footer = () => {
                         </label> 
                         <div className="relative">
                             <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 
-                            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                            <button className="btn bg-cyan-700 border-none absolute top-0 right-0 rounded-l-none">Subscribe</button>
                         </div>
                         </div>
                     </div>

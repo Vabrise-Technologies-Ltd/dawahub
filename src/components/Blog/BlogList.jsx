@@ -8,7 +8,7 @@ const BlogList = () => {
     const blogs = [
         {image: blog1, content: "Going all-in with millennial design", title: "Read More", icon1: <BsClock />, icon2: <BsCalendar />, time: "5min", date: "12th Oct 2022"},
         {image: blog2, content: "Going all-in with millennial design", title: "Read More", icon1: <BsClock />, icon2: <BsCalendar />, time: "5min", date: "12th Oct 2022"},
-        {image: blog2, content: "Going all-in with millennial design", title: "Read More", icon1: <BsClock />, icon2: <BsCalendar />, time: "5min", date: "12th Oct 2022"},
+        {image: blog3, content: "Going all-in with millennial design", title: "Read More", icon1: <BsClock />, icon2: <BsCalendar />, time: "5min", date: "12th Oct 2022"},
     ]
 
     return ( 
