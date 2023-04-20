@@ -7,37 +7,37 @@ const Footer = () => {
             <div className="bg-white md:py-16 py-8 px-4">
                 <footer className="footer text-base-content md:py-8 py-4 ">
                     <div>
-                        <span className="footer-title">Links</span> 
-                        <a className="link link-hover">Branding</a> 
-                        <a className="link link-hover">Design</a> 
-                        <a className="link link-hover">Marketing</a> 
-                        <a className="link link-hover">Advertisement</a>
-                    </div> 
-                    <div>
-                        <span className="footer-title">Company</span> 
-                        <a className="link link-hover">About us</a> 
-                        <a className="link link-hover">Contact</a> 
-                        <a className="link link-hover">Jobs</a> 
+                        <span className="footer-title">Shopping Categories</span> 
+                        <a className="link link-hover"> Drugs</a> 
+                        <a className="link link-hover">Viamins & Suppliments</a> 
+                        <a className="link link-hover">Skin Care</a>
+                        <a className="link link-hover">Hospital Equipments</a> 
                         <a className="link link-hover">Press kit</a>
                     </div> 
                     <div>
-                        <span className="footer-title">Legal</span> 
+                        <span className="footer-title">About Us</span> 
+                        <a className="link link-hover">Our History</a> 
+                        <a className="link link-hover">Our Team</a> 
+                        <a className="link link-hover">Services</a> 
+                        <a className="link link-hover">Blog</a> 
                         <a className="link link-hover">Terms of use</a> 
                         <a className="link link-hover">Privacy policy</a> 
-                        <a className="link link-hover">Cookie policy</a>
                     </div> 
                     <div>
-                        <span className="footer-title">Newsletter</span> 
-                        <div className="form-control w-80">
-                        <label className="label">
-                            <span className="label-text">Enter your email address</span>
-                        </label> 
-                        <div className="relative">
-                            <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 
-                            <button className="btn bg-cyan-700 border-none absolute top-0 right-0 rounded-l-none">Subscribe</button>
-                        </div>
-                        </div>
-                    </div>
+                        <span className="footer-title">Our Services</span> 
+                        <a className="link link-hover">A-Z Brands</a> 
+                        <a className="link link-hover">A-Z Store</a> 
+                        <a className="link link-hover">Health Services</a>
+                        <a className="link link-hover">Prescription Advice</a>
+                    </div> 
+                    <div>
+                        <span className="footer-title">Customer Care</span> 
+                        <a className="link link-hover">Delivery & Returns</a> 
+                        <a className="link link-hover">My Account</a> 
+                        <a className="link link-hover">FAQ's</a>
+                        <a className="link link-hover">Sitemap</a>
+                    </div> 
+                    
 
                     
                 </footer>

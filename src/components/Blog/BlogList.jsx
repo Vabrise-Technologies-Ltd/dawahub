@@ -23,10 +23,13 @@ const BlogList = () => {
                                 <img src={blog.image} alt="" />
                             </div>
                             <p className="text-center my-2">{blog.content}</p>
-                            <h2 className="text-center border-b-2 border-gray-800 pb-2 font-medium">
+                            <h2 className="text-center pb-1 font-medium">
                                 <a href="#">{blog.title}</a>
                             </h2>
-                            <div className="flex justify-around my-2">
+                            <div className="flex flex-col justify-center items-center">
+                                <hr className="border-b-2 rounded-full border-gray-800 w-20" />
+                            </div>
+                            <div className="flex justify-around mt-4">
                                 <p className="flex items-center space-x-2">
                                     {blog.icon1}
                                     <span className="text-gray-600 font-light text-sm">{blog.time}</span>
