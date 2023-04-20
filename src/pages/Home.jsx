@@ -1,9 +1,13 @@
-import ReachOut from "../components/Home/ReachOut";
+import BlogList from "../components/Blog/BlogList";
+import HomeHeroSection from "../components/Home/HomeHeroSection";
+import Newsletter from "../components/Home/Newsletter";
 
 const Home = () => {
     return ( 
         <>
-            <ReachOut />
+            <HomeHeroSection />
+            <BlogList />
+            <Newsletter />
         </>
      );
 }

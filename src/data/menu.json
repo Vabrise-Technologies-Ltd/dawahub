@@ -1,0 +1,24 @@
+{
+    "mainNav": [
+        {
+            "id": 1, 
+            "name": "Home", 
+            "route": "/"
+        },
+        {
+            "id": 2, 
+            "name": "Shop", 
+            "route": "/shop"
+        },
+        {
+            "id": 3, 
+            "name": "Prescription", 
+            "route": "/prescription"
+        },
+        {
+            "id": 4, 
+            "name": "Contact", 
+            "route": "/contact"
+        }
+    ]
+}
