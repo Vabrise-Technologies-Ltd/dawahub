@@ -2,7 +2,7 @@ const Newsletter = () => {
     return ( 
         <div className="bg-gradient-to-r from-cyan-500 to-cyan-700 via-cyan-600 md:p-16 p-6 grid md:grid-cols-2 md:gap-32 gap-8">
             <div className="section-title md:text-left text-white font-bold">
-                Sign Up for the Latest Deals, Product News, and more from Good Life.
+                Sign Up for the Latest Deals, Product News, and more from Dawahub.
             </div> 
             <div className="form-control md:w-80">
                 <div className="relative">

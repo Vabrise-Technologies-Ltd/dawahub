@@ -7,7 +7,7 @@ const CTA = () => {
 
     return ( 
         <>
-            <div className="md:p-16 p-6 md:my-32 my-8 md: grid md:grid-cols-3 md:gap-8 gap-4 bg-[#FAF4F4]">
+            <div className="md:p-16 p-6 md:mt-24 mt-8 md: grid md:grid-cols-3 md:gap-8 gap-4 bg-[#FAF4F4]">
                 {details.map((item) => (
                     <div>
                         <h2 className="md:text-2xl text-lg font-semibold text-gray-800">{item.title}</h2>

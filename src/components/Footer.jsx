@@ -4,7 +4,7 @@ const Footer = () => {
 
     return ( 
         <>
-            <div className="bg-white md:py-16 py-8 px-4">
+            <div className="bg-white py-8 px-4">
                 <footer className="footer text-base-content md:py-8 py-4 ">
                     <div>
                         <span className="footer-title">Shopping Categories</span> 
