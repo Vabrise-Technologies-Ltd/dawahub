@@ -1,4 +1,4 @@
-import CTA from "../components/Shop/CTA";
+import CTA from "../components/CTA";
 import ShopHero from "../components/Shop/ShopHero";
 
 const Shop = () => {

@@ -4,15 +4,14 @@ const Footer = () => {
 
     return ( 
         <>
-            <div className="bg-white md:py-16 py-8 px-4">
+            <div className="bg-white py-8 px-4">
                 <footer className="footer text-base-content md:py-8 py-4 ">
                     <div>
                         <span className="footer-title">Shopping Categories</span> 
                         <a className="link link-hover"> Drugs</a> 
                         <a className="link link-hover">Viamins & Suppliments</a> 
                         <a className="link link-hover">Skin Care</a>
-                        <a className="link link-hover">Hospital Equipments</a> 
-                        <a className="link link-hover">Press kit</a>
+                        <a className="link link-hover">Medical Equipments</a> 
                     </div> 
                     <div>
                         <span className="footer-title">About Us</span> 
