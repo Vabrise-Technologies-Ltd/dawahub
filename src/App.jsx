@@ -9,8 +9,10 @@ import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
+import Login from './pages/Login'
 import Prescription from './pages/Prescription'
 import Shop from './pages/Shop'
+import Signup from './pages/Signup'
 
 function App() {
 
@@ -20,6 +22,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path='/login' element={ <Login /> } />
+          <Route path='/signup' element={ <Signup /> } />
           <Route path='/' element={ <Home /> } />
           <Route path='/shop' element={ <Shop /> } />
           <Route path='/prescription' element={ <Prescription /> } />

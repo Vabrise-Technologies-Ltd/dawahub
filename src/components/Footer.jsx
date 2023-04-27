@@ -11,8 +11,7 @@ const Footer = () => {
                         <a className="link link-hover"> Drugs</a> 
                         <a className="link link-hover">Viamins & Suppliments</a> 
                         <a className="link link-hover">Skin Care</a>
-                        <a className="link link-hover">Hospital Equipments</a> 
-                        <a className="link link-hover">Press kit</a>
+                        <a className="link link-hover">Medical Equipments</a> 
                     </div> 
                     <div>
                         <span className="footer-title">About Us</span> 

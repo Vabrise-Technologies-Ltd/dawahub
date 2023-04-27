@@ -2,12 +2,22 @@
     "mainNav": [
         {
             "id": 1, 
-            "name": "Category", 
-            "route": "/"
+            "name": "Drugs", 
+            "route": "/shop"
         },
         {
             "id": 2, 
-            "name": "Shop", 
+            "name": "Vitamins", 
+            "route": "/shop"
+        },
+        {
+            "id": 2, 
+            "name": "Skin Care", 
+            "route": "/shop"
+        },
+        {
+            "id": 2, 
+            "name": "Medical Equipments", 
             "route": "/shop"
         }
     ]

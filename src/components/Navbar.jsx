@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { BiSearch, BiUserCircle } from "react-icons/bi"
 import { BsCart2, BsSearch } from "react-icons/bs"
-import { FaBars, FaTimes } from "react-icons/fa"
+import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa"
 import { useState } from "react";
 import data from "../data/menu.json"
 
@@ -15,7 +15,6 @@ const Navbar = () => {
                 <div className="md:flex justify-between items-center">
                     <div className="flex justify-between items-center">
                         <Link 
-                            activeClassName="!text-cyan-700"
                             className="md:text-2xl font-bold uppercase text-cyan-800" 
                             to='/'
                         >
@@ -28,15 +27,27 @@ const Navbar = () => {
 
                     <div className="md:flex hidden text-gray-700'">
                         <ul className="flex items-center font-medium">
-                            {data.mainNav.map((nav) => (
-                                <li 
-                                    key={nav.id} 
-                                    className="navlink md:mx-4 mx-2 md:my-0 my-2" >
-                                    <Link to={nav.route}>
-                                        {nav.name}
-                                    </Link>
-                                </li>
-                            ))}
+                            <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="rounded-btn flex items-center">
+                                     Category <FaChevronDown className="mx-1"/>
+                                </label>
+                                <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-40 mt-2">
+                                    {data.mainNav.map((nav) => (
+                                        <li 
+                                            key={nav.id}>
+                                            <Link to={nav.route}>
+                                                {nav.name}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <li  
+                                className="navlink md:mx-4 mx-2 md:my-0 my-2" >
+                                <Link to='/shop'>
+                                    Shop
+                                </Link>
+                            </li>
                             <div className="relative flex items-center">
                                 <input type="text" placeholder="Search" className="input px-3" /> 
                                 <button className="p-3 border-none absolute top-0 right-0 bottom-0">
@@ -79,14 +90,21 @@ const Navbar = () => {
                         </button> 
                     </div>
                     <ul className="flex flex-col items-center text-base font-medium space-y-8">
-                        {data.mainNav.map((nav) => (
-                            <li key={nav.id} onClick={() => setOpen((prev) => !prev)} className="navlink md:mx-4 mx-2 md:my-0 my-2">
-                                <Link to={nav.route}>
-                                    {nav.name}
-                                </Link>
-                            </li>
-                        ))}
-                        <input type="text" className="input" />
+                            {data.mainNav.map((nav) => (
+                                <li 
+                                    key={nav.id} 
+                                    className="navlink md:mx-4 mx-2 md:my-0 my-2" >
+                                    <Link to={nav.route}>
+                                        {nav.name}
+                                    </Link>
+                                </li>
+                            ))}
+                            <div className="relative flex items-center">
+                                <input type="text" placeholder="Search" className="input px-3" /> 
+                                <button className="p-3 border-none absolute top-0 right-0 bottom-0">
+                                    <BsSearch className="text-cyan-800 text-xl" />
+                                </button>
+                            </div>
                     </ul>
                     <ul className="flex flex-col items-center text-2xl font-medium space-y-8">
                         <Link 
