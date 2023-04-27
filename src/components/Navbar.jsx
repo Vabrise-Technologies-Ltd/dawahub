@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { BiSearch, BiUserCircle } from "react-icons/bi"
-import { BsCart2 } from "react-icons/bs"
+import { BsCart2, BsSearch } from "react-icons/bs"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { useState } from "react";
 import data from "../data/menu.json"
@@ -16,7 +16,7 @@ const Navbar = () => {
                     <div className="flex justify-between items-center">
                         <Link 
                             activeClassName="!text-cyan-700"
-                            className="md:text-lg font-semibold uppercase" 
+                            className="md:text-2xl font-bold uppercase text-cyan-800" 
                             to='/'
                         >
                                 Dawahub
@@ -37,6 +37,12 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                             ))}
+                            <div className="relative flex items-center">
+                                <input type="text" placeholder="Search" className="input px-3" /> 
+                                <button className="p-3 border-none absolute top-0 right-0 bottom-0">
+                                    <BsSearch className="text-cyan-800 text-xl" />
+                                </button>
+                            </div>
                         </ul>
                     </div>
 
@@ -48,15 +54,25 @@ const Navbar = () => {
                             <Link className="md:mx-3 mx-1" to='/cart'>
                                 <BsCart2 />
                             </Link>
-                            <Link className="md:mx-3 mx-1" to='/account'>
-                                <BiUserCircle />
-                            </Link>
+                            <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="btn btn-ghost rounded-btn">
+                                    <BiUserCircle className="text-lg mx-1" /> Account
+                                </label>
+                                <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                                    <Link className="p-1 m-1 text-base text-cyan-700" to='/login'>
+                                        Login
+                                    </Link> 
+                                    <Link className="p-1 m-1 text-base text-cyan-700" to='/signup'>
+                                        Signup
+                                    </Link>
+                                </ul>
+                            </div>
                         </ul>
                     </div>
                 </div>
 
                 {/* mobile-version */}
-                <div className={`${open ? "left-0 " : "left-[-100%]"} sm:hidden absolute top-0 right-0 bottom-0  space-y-8 py-6 px-8 w-full h-screen duration-300 ease-in-out bg-white`}>
+                <div className={`${open ? "left-0 " : "left-[-100%]"} sm:hidden absolute top-0 right-0 bottom-0 space-y-8 py-6 px-8 w-full h-screen duration-300 ease-in-out bg-[#FBEBB5]`}>
                     <div className="flex justify-end">
                         <button onClick={() => setOpen((prev) => !prev)} className="sm:hidden text-2xl text-gray-900 text-right">
                             <FaTimes />
@@ -70,6 +86,7 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         ))}
+                        <input type="text" className="input" />
                     </ul>
                     <ul className="flex flex-col items-center text-2xl font-medium space-y-8">
                         <Link 
