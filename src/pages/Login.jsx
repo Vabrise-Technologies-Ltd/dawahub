@@ -1,13 +1,30 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom";
 import loginImg from "../assets/home-hero.jpg"
+import axios from 'axios';
 
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate()
 
-    const handleLogin = () => {
-        console.log('hello')
+    const handleLogin = (e) => {
+        e.preventDefault()
+
+        axios.post('http://localhost:3000/users', {
+            email, 
+            password
+          })
+          .then(function (response) {
+            console.log(response);
+            navigate("/shop")
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        
+        setEmail('')
+        setPassword('')
     }
 
 

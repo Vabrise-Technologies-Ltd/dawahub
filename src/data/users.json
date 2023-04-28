@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "password": "Andrew",
+      "email": "andrew@gmail.com"
+    },
+    {
+      "id": 2,
+      "password": "Joe",
+      "email": "joe@gmail.com"
+    },
+    {
+      "id": 3,
+      "password": "Margret",
+      "email": "margret@gmail.com"
+    },
+    {
+      "id": 4,
+      "password": "Annastacia",
+      "email": "annastacia@gmail.com"
+    },
+    {
+      "email": "allan@gmail.com",
+      "password": "Allano23",
+      "id": 5
+    },
+    {
+      "email": "tess@gmail.com",
+      "password": "asdlksasnslksd",
+      "id": 6
+    },
+    {
+      "email": "tello@gmail.com",
+      "password": "lknalknslka",
+      "id": 7
+    },
+    {
+      "email": "tellow@gmail.com",
+      "password": "tell",
+      "id": 8
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "aosandufb",
+      "id": 9
+    },
+    {
+      "email": "testing@gmail.com",
+      "password": "testing2324",
+      "id": 10
+    }
+  ]
+}
