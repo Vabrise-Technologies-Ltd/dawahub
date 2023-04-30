@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import TopNav from './components/TopNav'
 import Account from './pages/Account'
 import Blogs from './pages/Blogs'
 import Cart from './pages/Cart'
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <TopNav />
         <Navbar />
         <Routes>
           <Route path='/login' element={ <Login /> } />
