@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import BottomNav from './components/BottomNav'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import TopNav from './components/TopNav'
@@ -23,6 +24,7 @@ function App() {
       <BrowserRouter>
         <TopNav />
         <Navbar />
+        <BottomNav />
         <Routes>
           <Route path='/login' element={ <Login /> } />
           <Route path='/signup' element={ <Signup /> } />

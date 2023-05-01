@@ -11,12 +11,12 @@
             "route": "/shop"
         },
         {
-            "id": 2, 
+            "id": 3, 
             "name": "Skin Care", 
             "route": "/shop"
         },
         {
-            "id": 2, 
+            "id": 4, 
             "name": "Medical Equipments", 
             "route": "/shop"
         }

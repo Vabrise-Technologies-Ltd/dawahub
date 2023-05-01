@@ -6,8 +6,8 @@ import Newsletter from "../components/Home/Newsletter";
 const Home = () => {
     return ( 
         <>
-            <HomeHeroSection />
             <Category />
+            <HomeHeroSection />
             <BlogList />
             <Newsletter />
         </>
