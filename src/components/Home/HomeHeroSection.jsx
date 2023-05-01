@@ -18,7 +18,8 @@ const HomeHeroSection = () => {
     ]
     return ( 
         <>
-            <section className=""><Splide 
+            <section className="">
+                <Splide 
                     className="w-full md:h-[500px] h-[250px]"
                     options={{
                       type: "loop",

@@ -6,8 +6,8 @@ const Newsletter = () => {
             </div> 
             <div className="form-control md:w-80">
                 <div className="relative">
-                    <input type="text" placeholder="user@gmail.com" className="input input-bordered rounded-lg w-full text-sm" /> 
-                    <button className="bg-[#FBEBB5] p-3 rounded-r-lg border-none absolute top-0 right-0 rounded-l-none font-medium uppe">Subscribe</button>
+                    <input type="text" placeholder="user@gmail.com" className="input input-bordered rounded-full w-full text-sm" /> 
+                    <button className="bg-[#FBEBB5] p-3 rounded-r-full border-none absolute top-0 right-0 rounded-l-none font-medium uppe">Subscribe</button>
                 </div>
             </div>
         </div>
