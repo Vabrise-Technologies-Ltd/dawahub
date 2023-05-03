@@ -36,16 +36,16 @@ const Navbar = () => {
                             <p className="p-8 group font-bold text-gray-600 hover:text-cyan-800 cursor-pointer ">
                                 <div className="flex gap-2 text-xl items-center">
                                     <p>Category </p>
-                                    <FaChevronDown className="font-bold mt-1 " size={15} />
+                                    <FaChevronDown className="font-bold mt-1 " size={18} />
                                 </div>
-                                <div className="hidden font-medium z-10 group-hover:block text-white absolute bg-cyan-700 rounded-xl border-none mt-2 py-2 w-[250px] h-[180px] ">
+                                <div className="hidden font-medium z-10 group-hover:block text-white absolute bg-cyan-700 rounded-xl border-none mt-2 py-2 w-[200px] h-[180px] ">
                                     {data.mainNav.map((nav) => (
                                         <li 
                                             key={nav.id}
                                             className="px-4 "
                                             >
                                             <Link to={nav.route}>
-                                                {nav.name}
+                                                <span className="hover:text-[#FBEBB5]">{nav.name}</span>
                                                 <hr className="my-2" />
                                             </Link>
                                         </li>

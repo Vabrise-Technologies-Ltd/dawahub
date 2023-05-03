@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     const date = new Date()
     const year = date.getFullYear()
@@ -7,6 +9,13 @@ const Footer = () => {
             <div className="bg-white py-8 px-4">
                 <footer className="footer text-base-content md:py-8 py-4 ">
                     <div>
+                        <span className="footer-title">Company</span> 
+                        <Link to='/admin' className="link link-hover">Admin</Link> 
+                        <Link to='/pharmacy-agent' className="link link-hover">Pharmacy Agents</Link> 
+                        <Link to='/' className="link link-hover">Users</Link>
+                        <Link to='/rider' className="link link-hover">Riders</Link> 
+                    </div> 
+                    <div>
                         <span className="footer-title">Shopping Categories</span> 
                         <a className="link link-hover"> Drugs</a> 
                         <a className="link link-hover">Viamins & Suppliments</a> 
@@ -15,11 +24,9 @@ const Footer = () => {
                     </div> 
                     <div>
                         <span className="footer-title">About Us</span> 
-                        <a className="link link-hover">Our History</a> 
-                        <a className="link link-hover">Our Team</a> 
                         <a className="link link-hover">Services</a> 
                         <a className="link link-hover">Blog</a> 
-                        <a className="link link-hover">Terms of use</a> 
+                        <a className="link link-hover">Terms & Conditions</a> 
                         <a className="link link-hover">Privacy policy</a> 
                     </div> 
                     <div>

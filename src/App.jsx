@@ -11,7 +11,6 @@ import Checkout from './pages/Checkout'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Login from './pages/Login'
-import Prescription from './pages/Prescription'
 import Shop from './pages/Shop'
 import Signup from './pages/Signup'
 
@@ -30,7 +29,6 @@ function App() {
           <Route path='/signup' element={ <Signup /> } />
           <Route path='/' element={ <Home /> } />
           <Route path='/shop' element={ <Shop /> } />
-          <Route path='/prescription' element={ <Prescription /> } />
           <Route path='/cart' element={ <Cart /> } />
           <Route path='/account' element={ <Account /> } />
           <Route path='/checkout' element={ <Checkout /> } />
