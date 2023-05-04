@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { GrStar } from "react-icons/gr"
 
 const ProductList = () => {
     const [products, setProducts] = useState([]);
@@ -46,7 +45,7 @@ const ProductList = () => {
             >
                 {products.map((product) => (
                     <SplideSlide>
-                        <div className="flex flex-col items-center  rounded-xl shadow-lg mx-3 p-3 cursor-pointer bg-[#FBEBB5]">
+                        <div className="flex flex-col items-center rounded-xl shadow-lg hover:shadow-xl mx-3 p-3 cursor-pointer bg-yellow-50">
                             <img
                                 src={product.image}
                                 alt="slide"

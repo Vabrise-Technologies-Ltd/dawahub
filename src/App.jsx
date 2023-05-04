@@ -13,6 +13,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Shop from './pages/Shop'
 import Signup from './pages/Signup'
+import Terms_And_Conditions from './pages/Terms_And_Conditions'
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           <Route path='/checkout' element={ <Checkout /> } />
           <Route path='/contact' element={ <Contact /> } />
           <Route path='/blogs' element={ <Blogs /> } />
+          <Route path='/terms_and_conditions' element={ <Terms_And_Conditions /> } />
         </Routes>
         <Footer />
       </BrowserRouter>

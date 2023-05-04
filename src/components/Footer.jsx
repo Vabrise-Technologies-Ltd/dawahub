@@ -6,7 +6,7 @@ const Footer = () => {
 
     return ( 
         <>
-            <div className="bg-white py-8 px-4">
+            <div className="bg-[#FBEBB5] py-8 px-4">
                 <footer className="footer text-base-content md:py-8 py-4 ">
                     <div>
                         <span className="footer-title">Company</span> 
@@ -17,31 +17,31 @@ const Footer = () => {
                     </div> 
                     <div>
                         <span className="footer-title">Shopping Categories</span> 
-                        <a className="link link-hover"> Drugs</a> 
-                        <a className="link link-hover">Viamins & Suppliments</a> 
-                        <a className="link link-hover">Skin Care</a>
-                        <a className="link link-hover">Medical Equipments</a> 
+                        <Link to='/' className="link link-hover"> Drugs</Link> 
+                        <Link to='/' className="link link-hover">Viamins & Suppliments</Link> 
+                        <Link to='/' className="link link-hover">Skin Care</Link>
+                        <Link to='/' className="link link-hover">Medical Equipments</Link> 
                     </div> 
                     <div>
                         <span className="footer-title">About Us</span> 
-                        <a className="link link-hover">Services</a> 
-                        <a className="link link-hover">Blog</a> 
-                        <a className="link link-hover">Terms & Conditions</a> 
-                        <a className="link link-hover">Privacy policy</a> 
+                        <Link to='/' className="link link-hover">Services</Link> 
+                        <Link to='/' className="link link-hover">Blog</Link> 
+                        <Link to='/terms_and_conditions' className="link link-hover">Terms & Conditions</Link> 
+                        <a href='#privacy-policy' target='_blank' className="link link-hover">Privacy policy</a> 
                     </div> 
                     <div>
                         <span className="footer-title">Our Services</span> 
-                        <a className="link link-hover">A-Z Brands</a> 
-                        <a className="link link-hover">A-Z Store</a> 
-                        <a className="link link-hover">Health Services</a>
-                        <a className="link link-hover">Prescription Advice</a>
+                        <Link to='/' className="link link-hover">A-Z Brands</Link> 
+                        <Link to='/' className="link link-hover">A-Z Store</Link> 
+                        <Link to='/' className="link link-hover">Health Services</Link>
+                        <Link to='/' className="link link-hover">Prescription Advice</Link>
                     </div> 
                     <div>
                         <span className="footer-title">Customer Care</span> 
-                        <a className="link link-hover">Delivery & Returns</a> 
-                        <a className="link link-hover">My Account</a> 
-                        <a className="link link-hover">FAQ's</a>
-                        <a className="link link-hover">Sitemap</a>
+                        <Link to='/' className="link link-hover">Delivery & Returns</Link> 
+                        <Link to='/' className="link link-hover">My Account</Link> 
+                        <Link to='/' className="link link-hover">FAQ's</Link>
+                        <Link to='/' className="link link-hover">Sitemap</Link>
                     </div> 
                     
 
@@ -53,7 +53,7 @@ const Footer = () => {
                 <div className="mt-3">
                     <p>
                         {year} 
-                        <a href="#" className="ml-1 text-cyan-700">Dawahub Africa</a>. All rights reserved
+                        <Link to='/' href="#" className="ml-1 text-cyan-700">Dawahub Africa</Link>. All rights reserved
                     </p>
                 </div>
             </div>
