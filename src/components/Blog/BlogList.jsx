@@ -13,40 +13,35 @@ const BlogList = () => {
 
     return ( 
         <>
-            <div className="md:my-24 my-12 md:px-16 px-4">
-                <h1 className="section-title">Our Blogs</h1>
-                <p className="section-subtitle">Find a bright ideal to suit your taste with our great selection</p>
-                <div className="grid md:grid-cols-3 gap-16 md:mt-16 mt-8">
-                    {blogs.map((blog) => (
+            <div className="grid md:grid-cols-3 gap-16 md:mt-16 mt-8">
+                {blogs.map((blog) => (
+                    <div>
                         <div>
-                            <div>
-                                <img src={blog.image} alt="" />
-                            </div>
-                            <p className="text-center my-2">{blog.content}</p>
-                            <h2 className="text-center pb-1 font-medium">
-                                <a href="#">{blog.title}</a>
-                            </h2>
-                            <div className="flex flex-col justify-center items-center">
-                                <hr className="border-b-2 rounded-full border-gray-800 w-20" />
-                            </div>
-                            <div className="flex justify-around mt-4">
-                                <p className="flex items-center space-x-2">
-                                    {blog.icon1}
-                                    <span className="text-gray-600 font-light text-sm">{blog.time}</span>
-                                </p>
-                                <p className="flex items-center space-x-2">
-                                    {blog.icon2}
-                                    <span className="text-gray-600 font-light text-sm">{blog.date}</span>
-                                </p>
-                            </div>
+                            <img src={blog.image} alt="" />
                         </div>
-                    ))}
-                </div>
-                
-                <div className="text-center md:mt-16 mt-8">
-                    <Link to="/blog" className="border-b-2 border-gray-800 pb-2">View All Post</Link>
-                </div>
-
+                        <p className="text-center my-2">{blog.content}</p>
+                        <h2 className="text-center pb-1 font-medium">
+                            <a href="#">{blog.title}</a>
+                        </h2>
+                        <div className="flex flex-col justify-center items-center">
+                            <hr className="border-b-2 rounded-full border-gray-800 w-20" />
+                        </div>
+                        <div className="flex justify-around mt-4">
+                            <p className="flex items-center space-x-2">
+                                {blog.icon1}
+                                <span className="text-gray-600 font-light text-sm">{blog.time}</span>
+                            </p>
+                            <p className="flex items-center space-x-2">
+                                {blog.icon2}
+                                <span className="text-gray-600 font-light text-sm">{blog.date}</span>
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            
+            <div className="text-center md:mt-16 mt-8">
+                <Link to='/blogs' className="border-b-2 border-gray-800 pb-2">View All Post</Link>
             </div>
 
         </>

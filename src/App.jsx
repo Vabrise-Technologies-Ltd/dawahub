@@ -34,7 +34,7 @@ function App() {
           <Route path='/account' element={ <Account /> } />
           <Route path='/checkout' element={ <Checkout /> } />
           <Route path='/contact' element={ <Contact /> } />
-          <Route path='/blogs' element={ <Blogs /> } />
+          <Route path='/blog' element={ <Blogs /> } />
           <Route path='/terms_and_conditions' element={ <Terms_And_Conditions /> } />
         </Routes>
         <Footer />
