@@ -39,10 +39,6 @@ const BlogList = () => {
                     </div>
                 ))}
             </div>
-            
-            <div className="text-center md:mt-16 mt-8">
-                <Link to='/blogs' className="border-b-2 border-gray-800 pb-2">View All Post</Link>
-            </div>
 
         </>
     );
