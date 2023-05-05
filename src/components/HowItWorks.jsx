@@ -2,8 +2,11 @@ import data from "../data/counties.json"
 
 const HowItWorks = () => {
     data.counties.map((item) => {
-        console.log(item.name)
-        console.log(item.code)
+        // console.log(item.name)
+        const countyList = item.code
+        console.log(typeof countyList)
+        // console.log(countyList.typeof())
+        
     })
 
     return ( 

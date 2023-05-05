@@ -17,11 +17,11 @@ const Navbar = () => {
 
     return ( 
         <>
-            <nav className="bg-[#FBEBB5] px-4 top-0 left-0 static z-[100] shadow-xl">
+            <nav className="bg-[#FBEBB5] p-4 top-0 left-0 static z-[100] shadow-xl">
                 <div className="md:flex justify-between items-center">
                     <div className="flex justify-between items-center">
                         <Link 
-                            className="md:text-2xl font-bold uppercase text-cyan-800" 
+                            className="md:text-2xl text-xl font-bold uppercase text-cyan-800" 
                             to='/'
                         >
                                 Dawahub
@@ -31,9 +31,9 @@ const Navbar = () => {
                         </button>
                     </div>
 
-                    <div className="md:flex hidden text-gray-700'">
+                    <div className="flex text-gray-700'">
                         <ul className="flex items-center font-medium">
-                            <p className="p-8 group font-bold text-gray-600 hover:text-cyan-800 cursor-pointer ">
+                            <p className="md:p-8 p-4 group font-bold text-gray-600 hover:text-cyan-800 cursor-pointer ">
                                 <div className="flex gap-2 text-xl items-center">
                                     <p>Categories</p>
                                     <FaChevronDown className="font-bold mt-1 " size={18} />
@@ -62,7 +62,7 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <div className="md:flex hidden'">
+                    <div className="md:flex hidden">
                         <ul className="flex items-center md:text-2xl text-lg text-gray-600">
                             <Link className="md:mx-3 mx-1 flex items-center" to='/'>
                                 <FiHeart />
@@ -107,12 +107,6 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                             ))}
-                            <div className="relative flex items-center">
-                                <input type="text" placeholder="Search" className="input px-3" /> 
-                                <button className="p-3 border-none absolute top-0 right-0 bottom-0">
-                                    <BsSearch className="text-cyan-800 text-xl" />
-                                </button>
-                            </div>
                     </ul>
 
                     <ul className="flex flex-col items-center font-medium space-y-8 md:text-2xl text-lg">
