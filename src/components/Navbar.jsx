@@ -35,7 +35,7 @@ const Navbar = () => {
                         <ul className="flex items-center font-medium">
                             <p className="p-8 group font-bold text-gray-600 hover:text-cyan-800 cursor-pointer ">
                                 <div className="flex gap-2 text-xl items-center">
-                                    <p>Category </p>
+                                    <p>Categories</p>
                                     <FaChevronDown className="font-bold mt-1 " size={18} />
                                 </div>
                                 <div className="hidden font-medium z-10 group-hover:block text-white absolute bg-cyan-700 rounded-xl border-none mt-2 py-2 w-[200px] h-[180px] ">

@@ -4,11 +4,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
-      // backgroundImage:{
-      //   'termsHero': 'url(/src/assets/banners/terms-condition-banner.jpg)'
-      // },
-    },
+    extend: {},
   },
   plugins: [require("daisyui")],
 }
