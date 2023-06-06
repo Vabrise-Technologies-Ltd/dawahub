@@ -17,7 +17,7 @@ const Navbar = () => {
 
     return ( 
         <>
-            <nav className="bg-[#FBEBB5] p-4 top-0 left-0 static z-[100] shadow-xl">
+            <nav className="bg-[#FBEBB5] px-4 md:py-0 py-3 top-0 left-0 static z-[100] shadow-xl">
                 <div className="md:flex justify-between items-center">
                     <div className="flex justify-between items-center">
                         <Link 
@@ -33,7 +33,7 @@ const Navbar = () => {
 
                     <div className="flex text-gray-700'">
                         <ul className="flex items-center font-medium">
-                            <p className="md:p-8 p-4 group font-bold text-gray-600 hover:text-cyan-800 cursor-pointer ">
+                            <p className="md:flex hidden md:p-8 p-4 group font-bold text-gray-600 hover:text-cyan-800 cursor-pointer ">
                                 <div className="flex gap-2 text-xl items-center">
                                     <p>Categories</p>
                                     <FaChevronDown className="font-bold mt-1 " size={18} />
@@ -53,7 +53,7 @@ const Navbar = () => {
                                 </div>
                             </p>
 
-                            <form onSubmit={handleSearch} className="relative flex items-center">
+                            <form onSubmit={handleSearch} className="md:mt-0 mt-3 relative flex items-center">
                                 <input type="text" placeholder="Search" className="input px-3 border-2 border-cyan-500 lg:w-[500px] w-full" /> 
                                 <button onClick={handleSearch} className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                                     <BsSearch className="text-cyan-800 text-xl" />

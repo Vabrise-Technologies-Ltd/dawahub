@@ -4,13 +4,13 @@ import { FaPhone } from "react-icons/fa";
 const TopNav = () => {
     return ( 
         <>
-            <div className="flex justify-between bg-gradient-to-r from-cyan-500 to-cyan-700 via-cyan-600 p-2">
-                <div className="md:flex justify-between items-center md:px-4 px-2">
+            <div className="md:flex justify-between bg-gradient-to-r from-cyan-500 to-cyan-700 via-cyan-600 py-2">
+                <div className="flex justify-between items-center px-4 md:pb-0 pb-2">
                     <div className="flex items-center font-bold text-[#FBEBB5] md:text-base text-xs">
                         <FaPhone className="mx-1" />
                         <p>+2547 1081 5080</p>
                     </div>
-                    <div className="grid grid-cols-4 gap-4 text-white md:mt-0 mt-4 lg:ml-24 md:ml-8">
+                    <div className="grid grid-cols-4 gap-4 text-white md:pt-0 pt-4 lg:ml-24 md:ml-8">
                         <BsFacebook />
                         <BsInstagram />
                         <BsTwitter />
