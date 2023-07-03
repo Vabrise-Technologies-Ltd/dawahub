@@ -1,7 +1,7 @@
 const Category = () => {
     return ( 
         <>
-            Category here..
+            {/* <p>{catItem}</p> */}
         </>
      );
 }

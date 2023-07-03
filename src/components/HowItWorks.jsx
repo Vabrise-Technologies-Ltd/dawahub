@@ -1,13 +1,10 @@
-import data from "../data/counties.json"
+// import data from "../data/counties.json"
 
 const HowItWorks = () => {
-    data.counties.map((item) => {
-        // console.log(item.name)
-        const countyList = item.code
-        console.log(typeof countyList)
-        // console.log(countyList.typeof())
+    // data.counties.map((item) => {
+    //     const countyList = item.code
         
-    })
+    // })
 
     return ( 
         <>

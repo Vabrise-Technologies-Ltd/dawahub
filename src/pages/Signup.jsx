@@ -34,7 +34,7 @@ const Signup = () => {
 
     return ( 
         <>
-            <div className="md:flex justify-center items-center md:mt-16 mt-12 mx-8">
+            <div className="md:flex justify-center items-center md:my-16 my-12 mx-8">
                 <div className="md:w-1/3 lg:mr-16 md:mr-8">
                     <img src={signUpImg} alt="" />
                 </div>

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { BiUserCircle } from "react-icons/bi"
-import { FiHeart } from "react-icons/fi"
+import { BiLogIn } from "react-icons/bi"
 import { BsCart2, BsSearch } from "react-icons/bs"
-import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa"
+import { RxDividerVertical } from "react-icons/rx"
+import { FaChevronDown, FaRegTimesCircle } from "react-icons/fa"
+import { HiMenuAlt2 } from "react-icons/hi"
 import { useState } from "react";
 import data from "../data/menu.json"
 
@@ -27,7 +28,7 @@ const Navbar = () => {
                                 Dawahub
                         </Link>
                         <button onClick={() => setOpen((prev) => !prev)} className=' sm:hidden text-2xl text-gray-900'>
-                            <FaBars />
+                            {open ? <FaRegTimesCircle className="text-cyan-700" /> : <HiMenuAlt2 /> }
                         </button>
                     </div>
 
@@ -35,7 +36,7 @@ const Navbar = () => {
                         <ul className="flex items-center font-medium">
                             <p className="md:flex hidden md:p-8 p-4 group font-bold text-gray-600 hover:text-cyan-800 cursor-pointer ">
                                 <div className="flex gap-2 text-xl items-center">
-                                    <p>Categories</p>
+                                    <p>Categories of Goods</p>
                                     <FaChevronDown className="font-bold mt-1 " size={18} />
                                 </div>
                                 <div className="hidden font-medium z-10 group-hover:block text-white absolute bg-cyan-700 rounded-xl border-none mt-2 py-2 w-[200px] h-[180px] ">
@@ -53,86 +54,64 @@ const Navbar = () => {
                                 </div>
                             </p>
 
-                            <form onSubmit={handleSearch} className="md:mt-0 mt-3 relative flex items-center">
-                                <input type="text" placeholder="Search" className="input px-3 border-2 border-cyan-500 lg:w-[500px] w-full" /> 
+                            <form onSubmit={handleSearch} className="md:mt-0 mt-3 relative md:flex hidden items-center">
                                 <button onClick={handleSearch} className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                    <BsSearch className="text-cyan-800 text-xl" />
+                                    <BsSearch className="text-cyan-800 md:text-xl text-base" />
                                 </button>
+                                <input type="text" placeholder="Search" className="input px-3 border-2 border-cyan-500 lg:w-[500px] w-full" />  
                             </form>
                         </ul>
                     </div>
 
-                    <div className="md:flex hidden">
-                        <ul className="flex items-center md:text-2xl text-lg text-gray-600">
-                            <Link className="md:mx-3 mx-1 flex items-center" to='/'>
-                                <FiHeart />
-                                <span className="md:text-xl ml-1 font-medium">Wishlist</span>
+                    <div className="flex">
+                        <form onSubmit={handleSearch} className="md:mt-0 mt-3 relative md:hidden flex items-center">
+                            <button onClick={handleSearch} className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <BsSearch className="text-cyan-800 text-xl" />
+                            </button>
+                            <input type="text" placeholder="Search" className="input px-3 border-2 border-cyan-500 lg:w-[500px] w-full" />  
+                        </form>
+                        <ul className="flex md:hidden items-center text-2xl text-gray-700 ">
+                            <Link to='/login' >
+                                <BiLogIn className="mr-1 " />
                             </Link>
                             <Link className="md:mx-3 mx-1 flex items-center" to='/cart'>
                                 <BsCart2 />
-                                <span className="md:text-xl ml-1 font-medium">Cart</span>
                             </Link>
-                            <div className="dropdown dropdown-end">
-                                <label tabIndex={0} className="btn rounded-full">
-                                    <BiUserCircle className="text-lg mx-1 " />
-                                    Account
-                                </label>
-                                <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-                                    <Link className="p-1 m-1 text-base text-cyan-700" to='/login'>
-                                        Login
-                                    </Link> 
-                                    <Link className="p-1 m-1 text-base text-cyan-700" to='/signup'>
-                                        Signup
-                                    </Link>
-                                </ul>
-                            </div>
+                        </ul>
+                        <ul className="md:flex hidden items-center md:text-2xl text-lg text-gray-600">
+                            <Link to='/login' className="flex items-center border border-cyan-800 p-1 rounded-lg text-sm">
+                                <BiLogIn className="mr-1" />
+                                Login
+                                <RxDividerVertical className="mx-1" />
+                                Signup
+                            </Link>
+                            <RxDividerVertical className="md:text-4xl" />
+                            <Link className="md:mx-3 mx-1 flex items-center" to='/cart'>
+                                <BsCart2 />
+                            </Link>
                         </ul>
                     </div>
                 </div>
 
                 {/* mobile-version */}
-                <div className={`${open ? "left-0 " : "left-[-100%]"} sm:hidden absolute top-0 right-0 bottom-0 space-y-8 py-6 px-8 w-full h-screen duration-300 ease-in-out bg-[#FBEBB5]`}>
-                    <div className="flex justify-end">
-                        <button onClick={() => setOpen((prev) => !prev)} className="sm:hidden text-2xl text-gray-900 text-right">
-                            <FaTimes />
-                        </button> 
-                    </div>
-                    <ul className="flex flex-col items-center text-base font-medium space-y-8">
-                            {data.mainNav.map((nav) => (
-                                <li 
-                                    key={nav.id} 
-                                    className="navlink md:mx-4 mx-2 md:my-0 my-2" >
-                                    <Link to={nav.route}>
-                                        {nav.name}
-                                    </Link>
-                                </li>
-                            ))}
-                    </ul>
-
-                    <ul className="flex flex-col items-center font-medium space-y-8 md:text-2xl text-lg">
-                        <Link className="flex items-center space-x-2 md:mx-3 mx-1" to='/'>
-                            <FiHeart />
-                            <p>Wishlist</p>
-                        </Link>
-                        <Link className="flex items-center space-x-2 md:mx-3 mx-1" to='/cart'>
-                            <BsCart2 />
-                            <p>Cart</p>
-                        </Link>
-                        <div className="dropdown dropdown-end">
-                            <label tabIndex={0} className="btn rounded-full">
-                                <BiUserCircle className="text-lg mx-1 " />
-                                Account
-                            </label>
-                            <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-                                <Link className="p-1 m-1 text-base text-cyan-700" to='/login'>
-                                    Login
-                                </Link> 
-                                <Link className="p-1 m-1 text-base text-cyan-700" to='/signup'>
-                                    Signup
-                                </Link>
-                            </ul>
+                <div className={`${open ? "left-0 " : "left-[-100%]"} sm:hidden absolute top-0 right-0 bottom-0 space-y-8 py-6 px-4 w-5/6 h-screen duration-300 ease-in-out bg-[#FBEBB5]`}>
+                    <div>
+                        <div>
+                            <h3 className="mb-6 text-cyan-700 text-lg font-semibold">Category of Goods</h3>
+                            <hr className="border border-cyan-800"/>
                         </div>
-                    </ul>
+                        <ul className="flex flex-col text-base font-medium space-y-8">
+                                {data.mainNav.map((nav) => (
+                                    <li 
+                                        key={nav.id} 
+                                        className="navlink md:mx-4 mx-2 md:my-0 my-2" >
+                                        <Link to={nav.route}>
+                                            {nav.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </>

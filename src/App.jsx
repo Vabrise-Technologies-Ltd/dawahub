@@ -1,5 +1,6 @@
 // import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { useState, useEffect } from "react";
 import './App.css'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
@@ -16,6 +17,15 @@ import Signup from './pages/Signup'
 import Terms_And_Conditions from './pages/Terms_And_Conditions'
 
 function App() {
+  const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch("https://dummyjson.com/products")
+        .then((res) => res.json())
+        .then((data) => {
+            const items = data.products
+            setProducts(items);  
+        });
+    }, []);
 
 
   return (
@@ -28,7 +38,7 @@ function App() {
         <Routes>
           <Route path='/login' element={ <Login /> } />
           <Route path='/signup' element={ <Signup /> } />
-          <Route path='/' element={ <Home /> } />
+          <Route path='/' element={ <Home products={products} /> } />
           <Route path='/shop' element={ <Shop /> } />
           <Route path='/cart' element={ <Cart /> } />
           <Route path='/account' element={ <Account /> } />

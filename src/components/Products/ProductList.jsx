@@ -1,16 +1,7 @@
-import { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-const ProductList = () => {
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
-        .then((res) => res.json())
-        .then((data) => {
-            setProducts(data);
-        console.log(data)
-        });
-    }, []);
+const ProductList = ({products}) => {
+    
 
   return (
         <div className="md:m-8 mx-4 py-8">
@@ -48,7 +39,7 @@ const ProductList = () => {
                     <SplideSlide>
                         <div className="flex flex-col items-center rounded-xl shadow-lg hover:shadow-xl mx-3 p-3 cursor-pointer bg-yellow-50">
                             <img
-                                src={product.image}
+                                src={product.images[0]}
                                 alt="slide"
                                 className="md:h-[160px] h-[100px] md:w-[160px] w-[100px] mx-2"
                             />
@@ -59,7 +50,7 @@ const ProductList = () => {
                                 {product.description.slice(0, 40)}...
                             </p>
                             <div className="flex gap-2 md:gap-4">
-                                <p className="md:text-lg text-xs font-bold text-[#82E602]">
+                                <p className="md:text-lg text-xs font-bold text-cyan-600">
                                     KES {product.price * 100}
                                 </p>
                             </div>

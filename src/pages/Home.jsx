@@ -6,12 +6,19 @@ import Products from "../components/Products/Products";
 import HowItWorks from "../components/HowItWorks";
 import HomeBlogs from "../components/Blog/HomeBlogs";
 
-const Home = () => {
+const Home = ({products}) => {
+    const catItems = products.filter((item) => {
+        if (item.category == 'laptops') {
+            const phones = item
+            console.log(phones)
+        } 
+    })
+    console.log(catItems)
     return ( 
-        <>
+        <>  
             <HomeHeroSection />
-            <Category />
-            <Products />
+            <Category   />
+            <Products products={products}/>
             <HomeAboutSection />
             <HowItWorks />
             <HomeBlogs />
