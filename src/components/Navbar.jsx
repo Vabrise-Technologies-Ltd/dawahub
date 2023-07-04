@@ -36,7 +36,7 @@ const Navbar = () => {
                         <ul className="flex items-center font-medium">
                             <p className="md:flex hidden md:p-8 p-4 group font-bold text-gray-600 hover:text-cyan-800 cursor-pointer ">
                                 <div className="flex gap-2 text-xl items-center">
-                                    <p>Categories of Goods</p>
+                                    <p>Categories </p>
                                     <FaChevronDown className="font-bold mt-1 " size={18} />
                                 </div>
                                 <div className="hidden font-medium z-10 group-hover:block text-white absolute bg-cyan-700 rounded-xl border-none mt-2 py-2 w-[200px] h-[180px] ">
@@ -63,14 +63,14 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <div className="flex">
+                    <div className="flex justify-between">
                         <form onSubmit={handleSearch} className="md:mt-0 mt-3 relative md:hidden flex items-center">
                             <button onClick={handleSearch} className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                                 <BsSearch className="text-cyan-800 text-xl" />
                             </button>
                             <input type="text" placeholder="Search" className="input px-3 border-2 border-cyan-500 lg:w-[500px] w-full" />  
                         </form>
-                        <ul className="flex md:hidden items-center text-2xl text-gray-700 ">
+                        <ul className="flex sm:hidden items-center text-2xl text-gray-700 ">
                             <Link to='/login' >
                                 <BiLogIn className="mr-1 " />
                             </Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
                                 <BsCart2 />
                             </Link>
                         </ul>
-                        <ul className="md:flex hidden items-center md:text-2xl text-lg text-gray-600">
+                        <ul className="sm:flex hidden items-center md:text-2xl text-lg text-gray-600">
                             <Link to='/login' className="flex items-center border border-cyan-800 p-1 rounded-lg text-sm">
                                 <BiLogIn className="mr-1" />
                                 Login

@@ -18,14 +18,29 @@ import Terms_And_Conditions from './pages/Terms_And_Conditions'
 
 function App() {
   const [products, setProducts] = useState([]);
-    useEffect(() => {
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+
+  useEffect(() => {
         fetch("https://dummyjson.com/products")
-        .then((res) => res.json())
-        .then((data) => {
-            const items = data.products
-            setProducts(items);  
-        });
-    }, []);
+          .then((res) => res.json())
+          .then((data) => {
+              const items = data.products
+               
+              setTimeout(() => {
+                console.log(items)
+                setProducts(items);
+              }, 2000);
+              setLoading(false)
+              setError(false) 
+          })
+          .catch((err) => {
+            // console.log(error)
+            setError(err.message)
+            setLoading(false)
+          })
+  }, []);
 
 
   return (
@@ -38,7 +53,7 @@ function App() {
         <Routes>
           <Route path='/login' element={ <Login /> } />
           <Route path='/signup' element={ <Signup /> } />
-          <Route path='/' element={ <Home products={products} /> } />
+          <Route path='/' element={ <Home products={products} loading={loading} error={error} /> } />
           <Route path='/shop' element={ <Shop /> } />
           <Route path='/cart' element={ <Cart /> } />
           <Route path='/account' element={ <Account /> } />
