@@ -79,7 +79,7 @@ const Navbar = () => {
                             </Link>
                         </ul>
                         <ul className="sm:flex hidden items-center md:text-2xl text-lg text-gray-600">
-                            <Link to='/login' className="flex items-center border border-cyan-800 p-1 rounded-lg text-sm">
+                            <Link to='/login' className="flex items-center border-2 border-cyan-600 p-2 rounded-lg text-base">
                                 <BiLogIn className="mr-1" />
                                 Login
                                 <RxDividerVertical className="mx-1" />

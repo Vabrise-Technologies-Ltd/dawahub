@@ -8,10 +8,7 @@ import HomeBlogs from "../components/Blog/HomeBlogs";
 
 const Home = ({products, loading, error}) => {
     const catItems = products.filter((item) => {
-        if (item.category == 'laptops') {
-            const phones = item
-            // console.log(phones)
-        } 
+        return item.category
     })
     console.log(catItems)
     return ( 
