@@ -15,6 +15,7 @@ import Login from './pages/Login'
 import Shop from './pages/Shop'
 import Signup from './pages/Signup'
 import Terms_And_Conditions from './pages/Terms_And_Conditions'
+import ProductDetails from './components/Products/ProductDetails';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -27,16 +28,11 @@ function App() {
           .then((res) => res.json())
           .then((data) => {
               const items = data.products
-               
-              setTimeout(() => {
-                console.log(items)
-                setProducts(items);
-              }, 2000);
+              setProducts(items);
               setLoading(false)
               setError(false) 
           })
           .catch((err) => {
-            // console.log(error)
             setError(err.message)
             setLoading(false)
           })
@@ -54,6 +50,7 @@ function App() {
           <Route path='/login' element={ <Login /> } />
           <Route path='/signup' element={ <Signup /> } />
           <Route path='/' element={ <Home products={products} loading={loading} error={error} /> } />
+          <Route path='/categories/products/:id' element={ <ProductDetails products={products} error={error} loading={loading} /> } />
           <Route path='/shop' element={ <Shop /> } />
           <Route path='/cart' element={ <Cart /> } />
           <Route path='/account' element={ <Account /> } />

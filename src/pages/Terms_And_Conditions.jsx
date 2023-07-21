@@ -1,4 +1,4 @@
-import termsImage from "../assets/banners/terms-condition-banner.jpg"
+import termsImage from "../assets/bg-shape.png"
 
 const Terms_And_Conditions = () => {
     return ( 

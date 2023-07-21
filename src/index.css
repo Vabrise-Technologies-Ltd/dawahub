@@ -24,12 +24,8 @@
         @apply bg-gradient-to-r from-cyan-500 to-cyan-700 via-cyan-600 border-none rounded-lg py-3 text-white font-medium
     }
 
-    .input {
-        @apply md:py-3 py-2 px-2 bg-white w-full focus-within:border-cyan-400 outline-none rounded-lg text-gray-700 font-normal 
-    }
-
-    .form-input {
-        @apply bg-gray-200 border-2 border-cyan-400 my-2 focus-within:bg-gray-100
+    .input-form {
+        @apply md:py-2 py-1 px-2 bg-white w-full border-2 border-gray-400 focus-within:border-cyan-400 outline-none rounded-lg text-gray-700 font-normal 
     }
     
     .label {
@@ -47,6 +43,28 @@
     .carousel-card-name {
         @apply text-cyan-800 hover:text-gray-800 font-medium md:text-lg text-xs md:mb-3 mb-2
     }
+
+    .card-thumbnail {
+        @apply bg-white px-8 shadow-xl
+    }
+
+    .image-list {
+        @apply h-20 w-20 p-4 hover:bg-gray-300 bg-gray-100 cursor-pointer rounded-lg
+    }
+
+    .card-secondary-title {
+        @apply font-semibold text-gray-700
+    }
+
+    .card-stock {
+        @apply flex space-x-2 items-center  
+    }
+
+    .card-content {
+        @apply text-gray-700 font-light italic md:text-base text-sm
+    }
+
+
 
 
 }

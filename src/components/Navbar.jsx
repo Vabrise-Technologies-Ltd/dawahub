@@ -58,17 +58,17 @@ const Navbar = () => {
                                 <button onClick={handleSearch} className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                                     <BsSearch className="text-cyan-800 md:text-xl text-base" />
                                 </button>
-                                <input type="text" placeholder="Search" className="input px-3 border-2 border-cyan-500 lg:w-[500px] w-full" />  
+                                <input type="text" placeholder="Search" className="input-form" />  
                             </form>
                         </ul>
                     </div>
 
-                    <div className="flex justify-between">
+                    <div className="flex justify-between items-center">
                         <form onSubmit={handleSearch} className="md:mt-0 mt-3 relative md:hidden flex items-center">
                             <button onClick={handleSearch} className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                                 <BsSearch className="text-cyan-800 text-xl" />
                             </button>
-                            <input type="text" placeholder="Search" className="input px-3 border-2 border-cyan-500 lg:w-[500px] w-full" />  
+                            <input type="text" placeholder="Search" className="input-form" />  
                         </form>
                         <ul className="flex sm:hidden items-center text-2xl text-gray-700 ">
                             <Link to='/login' >
