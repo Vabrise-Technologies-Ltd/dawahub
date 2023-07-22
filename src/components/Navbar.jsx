@@ -2,13 +2,15 @@ import { Link } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi"
 import { BsCart2, BsSearch } from "react-icons/bs"
 import { RxDividerVertical } from "react-icons/rx"
-import { FaChevronDown, FaRegTimesCircle } from "react-icons/fa"
+import { FaRegTimesCircle } from "react-icons/fa"
 import { HiMenuAlt2 } from "react-icons/hi"
+import { MdOutlineKeyboardArrowUp, MdOutlineKeyboardArrowDown } from "react-icons/md"
 import { useState } from "react";
 import data from "../data/menu.json"
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const [dropdown, setDropdown] = useState(false)
 
     const handleSearch = (e) => {
         e.preventDefault()
@@ -18,7 +20,7 @@ const Navbar = () => {
 
     return ( 
         <>
-            <nav className="bg-[#FBEBB5] px-4 md:py-0 py-3 top-0 left-0 static z-[100] shadow-xl">
+            <nav className="bg-[#FBEBB5] px-4 md:py-6 py-3 top-0 left-0 static z-[100] shadow-xl">
                 <div className="md:flex justify-between items-center">
                     <div className="flex justify-between items-center">
                         <Link 
@@ -32,33 +34,44 @@ const Navbar = () => {
                         </button>
                     </div>
 
-                    <div className="flex text-gray-700'">
+                    <div className="flex  ">
                         <ul className="flex items-center font-medium">
-                            <p className="md:flex hidden md:p-8 p-4 group font-bold text-gray-600 hover:text-cyan-800 cursor-pointer ">
-                                <div className="flex gap-2 text-xl items-center">
-                                    <p>Categories </p>
-                                    <FaChevronDown className="font-bold mt-1 " size={18} />
-                                </div>
-                                <div className="hidden font-medium z-10 group-hover:block text-white absolute bg-cyan-700 rounded-xl border-none mt-2 py-2 w-[200px] h-[180px] ">
-                                    {data.mainNav.map((nav) => (
-                                        <li 
-                                            key={nav.id}
-                                            className="px-4 "
-                                            >
-                                            <Link to={nav.route}>
-                                                <span className="hover:text-[#FBEBB5]">{nav.name}</span>
-                                                <hr className="my-2" />
+                            <div className="relative md:flex hidden">
+                                <button className="text-cyan-500 uppercase text-lg flex items-center" onClick={() => setDropdown(!dropdown)}>
+                                    Categories
+                                    {dropdown ? <MdOutlineKeyboardArrowUp className="text-3xl" /> : <MdOutlineKeyboardArrowDown className="text-3xl" />}
+                                </button>
+                                {dropdown ? (
+                                    <ul className="absolute p-0 md:w-32 w-28 text-sm rounded-md bg-white shadow-lg text-left">
+                                        <li className="hover:bg-cyan-300 hover:text-white text-cyan-600 font-light tracking-wide rounded-t-md">
+                                            <Link className="w-[100%] text-inherit p-2 cursor-pointer bg-none" to='/shop'>
+                                                Drugs
                                             </Link>
                                         </li>
-                                    ))}
-                                </div>
-                            </p>
+                                        <li className="hover:bg-cyan-300 hover:text-white text-cyan-600 font-light tracking-wide">
+                                            <Link className="w-[100%] text-inherit p-2 cursor-pointer bg-none" to='/shop'>
+                                                Vitamins
+                                            </Link>
+                                        </li>
+                                        <li className="hover:bg-cyan-300 hover:text-white text-cyan-600 font-light tracking-wide">
+                                            <Link className="w-[100%] text-inherit p-2 cursor-pointer bg-none" to='/shop'>
+                                                Skin Care
+                                            </Link>
+                                        </li>
+                                        <li className="hover:bg-cyan-300 hover:text-white text-cyan-600 font-light tracking-wide rounded-b-md">
+                                            <Link className="w-[100%] text-inherit p-2 cursor-pointer bg-none" to='/shop'>
+                                                Medical Equipments
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                ) : null}
+                            </div>
 
                             <form onSubmit={handleSearch} className="md:mt-0 mt-3 relative md:flex hidden items-center">
                                 <button onClick={handleSearch} className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                    <BsSearch className="text-cyan-800 md:text-xl text-base" />
+                                    <BsSearch className="text-cyan-600 md:text-lg text-sm" />
                                 </button>
-                                <input type="text" placeholder="Search" className="input-form" />  
+                                <input type="text" placeholder="Search" className="input-form md:w-[30rem] w-full" />  
                             </form>
                         </ul>
                     </div>
@@ -66,9 +79,9 @@ const Navbar = () => {
                     <div className="flex justify-between items-center">
                         <form onSubmit={handleSearch} className="md:mt-0 mt-3 relative md:hidden flex items-center">
                             <button onClick={handleSearch} className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                <BsSearch className="text-cyan-800 text-xl" />
+                                <BsSearch className="text-cyan-600 text-sm" />
                             </button>
-                            <input type="text" placeholder="Search" className="input-form" />  
+                            <input type="text" placeholder="Search" className="input-form w-full" />  
                         </form>
                         <ul className="flex sm:hidden items-center text-2xl text-gray-700 ">
                             <Link to='/login' >
@@ -101,15 +114,15 @@ const Navbar = () => {
                             <hr className="border border-cyan-800"/>
                         </div>
                         <ul className="flex flex-col text-base font-medium space-y-8">
-                                {data.mainNav.map((nav) => (
-                                    <li 
-                                        key={nav.id} 
-                                        className="navlink md:mx-4 mx-2 md:my-0 my-2" >
-                                        <Link to={nav.route}>
-                                            {nav.name}
-                                        </Link>
-                                    </li>
-                                ))}
+                            {data.mainNav.map((nav) => (
+                                <li 
+                                    key={nav.id} 
+                                    className="navlink md:mx-4 mx-2 md:my-0 my-2" >
+                                    <Link to={nav.route}>
+                                        {nav.name}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>

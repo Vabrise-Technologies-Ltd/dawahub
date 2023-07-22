@@ -42,17 +42,17 @@ const ProductList = ({products, loading, error}) => {
                     <SplideSlide>
                         {error && <p>{error}</p>}
                         {loading ? (<p className="mb-4 text-green-600">Loading products...</p>) : (
-                            <div className="flex flex-col items-center rounded-xl shadow-lg hover:shadow-xl mx-3 cursor-pointer bg-[#FBEBB5]"> 
-                                <div className="bg-white rounded-t-xl p-4 w-full flex items-center justify-center"> 
+                            <div className="flex flex-col items-center rounded-xl shadow-lg hover:shadow-xl mx-3 bg-[#FBEBB5]"> 
+                                <Link to={`/categories/products/${product.id}`} className="bg-white rounded-t-lg p-4 w-full flex items-center justify-center"> 
                                     <img
                                         src={product.images[0]}
                                         alt="slide"
-                                        className="hover:scale-105 duration-500 md:h-[160px] h-[100px] md:w-[200px] w-[100px]   mx-2 rounded-t-xl"
+                                        className="hover:scale-105 duration-500 ease-in-out md:h-[160px] h-[100px] md:w-[200px] w-[100px] rounded-t-lg"
                                     />
-                                </div>
-                                <Link to={`/categories/products/${product.id}`} className="p-4">
+                                </Link>
+                                <div className="p-4">
                                     <h3 className="font-semibold text-xs md:text-sm pt-2">
-                                        {product.title.slice(0, 10)}...
+                                        {product.title.slice(0, 20)}...
                                     </h3>
                                     <p className="font-light text-xs md:text-sm py-1">
                                         {product.description.slice(0, 40)}...
@@ -60,7 +60,10 @@ const ProductList = ({products, loading, error}) => {
                                     <p className="md:text-base text-xs font-semibold text-cyan-600">
                                             KES {product.price * 100}
                                     </p>
-                                </Link>
+                                    <button className="btn btn-sm mt-3 ">
+                                        Add to Cart
+                                    </button>
+                                </div>
                             </div>     
                         )}
                         

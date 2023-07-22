@@ -1,17 +1,18 @@
 import { FaChevronRight } from "react-icons/fa"
+import shopHeroImg from "../../assets//hero/hero7.jpg"
 
 const ShopHero = () => {
     return ( 
         <>
-            <div className="hero min-h-screen" style={{ backgroundImage: `url("https://whyy.org/wp-content/uploads/2022/06/riddle-hospital-media-pa-768x458.png")` }}>
+            <div className="hero md:min-h-screen h-[300px] bg-cover" style={{ backgroundImage: `url(${shopHeroImg})` }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-gray-100">
                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Shop</h1>
+                        <h1 className="mb-5 md:text-5xl text-3xl font-bold">Shop</h1>
                         <div className="mb-5 flex items-center font-medium">
                             Home 
-                            <FaChevronRight className="mx-4" />
-                            <span className="font-light">Shop</span>
+                            <FaChevronRight className="md:mx-4 mx-2" />
+                            <span className="text-[#FBEBB5]">Shop</span>
                         </div>
                     </div>
                 </div>

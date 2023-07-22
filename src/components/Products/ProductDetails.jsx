@@ -54,7 +54,7 @@ const ProductDetails = ({products, loading, error}) => {
                                 <label htmlFor="description">Description:</label>
                                 <p className="card-content">{product.description}</p>
                             </div>
-                            <input type="number" placeholder="1" className="input-form"/>
+                            <input type="number" placeholder="1" className="input-form w-[6rem]"/>
                             <div className="flex space-x-4 items-baseline">
                                 <p className="font-medium text-gray-600">Ksh 
                                     <span className="ml-1">
